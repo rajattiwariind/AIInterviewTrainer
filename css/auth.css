@@ -1,0 +1,34 @@
+body {
+  background: #0a0c1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Poppins;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg,#6c63ff,#00e5ff);
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
