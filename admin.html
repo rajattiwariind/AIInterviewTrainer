@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | AI Interview Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0c1b;
+      color: #fff;
+      padding: 30px;
+    }
+
+    h1, h2 {
+      color: #6c63ff;
+    }
+
+    select, input {
+      padding: 10px 12px;
+      margin-right: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background: #6c63ff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #questionList {
+      margin-top: 30px;
+    }
+
+    .question-item {
+      background: #11142b;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .question-item button {
+      margin-left: 10px;
+      background: #ff4b5c;
+    }
+
+    .question-item button.edit-btn {
+      background: #4bcffa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admin Panel</h1>
+
+  <div>
+    <select id="adminRole">
+      <option value="hr">HR</option>
+      <option value="java">Java</option>
+      <option value="android">Android</option>
+      <option value="web">Web</option>
+    </select>
+
+    <input type="text" id="newQuestion" placeholder="Enter question">
+
+    <button onclick="addQuestion()">Add Question</button>
+  </div>
+
+  <div id="questionList"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | AI Interview Trainer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#1a1f4b,#0a0c1b);
+  color:white;
+  padding:30px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:8px;
+}
+
+.avatar{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#6c63ff,#00e5ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 rgba(108,99,255,.6)}
+  70%{box-shadow:0 0 25px rgba(108,99,255,0)}
+  100%{box-shadow:0 0 0 rgba(108,99,255,0)}
+}
+
+.header h1{
+  font-size:26px;
+}
+
+.subtitle{
+  opacity:.8;
+  margin-bottom:25px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  font-size:16px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+}
+
+.card span{
+  display:block;
+  font-size:28px;
+  font-weight:700;
+  margin-top:8px;
+  color:#00e5ff;
+  text-shadow:0 0 12px rgba(0,229,255,.6);
+}
+
+/* ROLE SELECTION */
+.role-selection{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:25px;
+  max-width:400px;
+  margin-bottom:30px;
+}
+
+
+.role-selection label{
+  display:block;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+select{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+  font-size:15px;
+}
+
+/* START BUTTON */
+.start-btn{
+  display:inline-block;
+  padding:16px 34px;
+  border-radius:40px;
+  background:linear-gradient(135deg,#6c63ff,#00e5ff);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.start-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 40px rgba(108,99,255,0.5);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:50px;
+  font-size:14px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="avatar">🤖</div>
+  <h1>Welcome to AI Interview Trainer</h1>
+</div>
+
+<p class="subtitle">Sharpen your skills with AI-driven mock interviews</p>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="card">
+    Interviews Taken
+    <span id="count">0</span>
+  </div>
+  <div class="card">
+    Last Score
+    <span id="score">-</span>
+  </div>
+</div>
+
+<!-- ROLE SELECTION -->
+<div class="role-selection enhanced-role">
+  <label for="role">Choose Your Interview Path</label>
+
+  <div class="select-wrapper">
+    <select id="role">
+      <option value="hr"> HR Interview</option>
+      <option value="java"> Java Developer</option>
+      <option value="android"> Android Developer</option>
+      <option value="web"> Web Developer</option>
+    </select>
+  </div>
+
+</div>
+
+
+<!-- START BUTTON -->
+<a href="#" class="start-btn" onclick="startInterview()">Start Interview →</a>
+
+<div class="footer">
+  Practice. Improve. Get hired 🚀
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
